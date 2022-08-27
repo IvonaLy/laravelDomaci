@@ -22,3 +22,10 @@ use Illuminate\Support\Facades\Route;
 
  Route::get("/dogadjaji",[DogadjajController::class,'index']);
  Route::get("/dogadjaji/{id}",[DogadjajController::class,'show']);
+
+ Route::post("/dogadjaji",[DogadjajController::class,'store']);
+ Route::put("/dogadjaji/{id}",[DogadjajController::class,'update']);
+ Route::delete("/dogadjaji/{id}",[DogadjajController::class,'destroy']);
+
+
+
