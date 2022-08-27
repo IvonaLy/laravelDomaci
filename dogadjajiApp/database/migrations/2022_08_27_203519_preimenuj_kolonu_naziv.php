@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMestosTable extends Migration
+class PreimenujKolonuNaziv extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateMestosTable extends Migration
      */
     public function up()
     {
-        Schema::create('mestos', function (Blueprint $table) {
-            $table->id();
-            $table->string('naziv');
-            $table->integer('kapacitet'); 
-            $table->timestamps();
+        Schema::table('mestos', function (Blueprint $table) {
+           
+            $table->renameColumn('naziv','naziv_mesta');
+           
+             
         });
     }
 
@@ -28,6 +28,9 @@ class CreateMestosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mestos');
+        Schema::table('mestos', function (Blueprint $table) {
+           
+            $table->renameColumn('naziv_mesta','naziv'); 
+        });
     }
 }

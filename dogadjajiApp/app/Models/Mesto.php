@@ -10,7 +10,7 @@ class Mesto extends Model
     use HasFactory;
     protected $fillable = [
         'id',
-        'naziv',
+        'naziv_mesta',
         'kapacitet', 
     ];
     public function dogadjaj()

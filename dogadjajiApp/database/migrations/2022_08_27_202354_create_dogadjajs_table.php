@@ -15,6 +15,13 @@ class CreateDogadjajsTable extends Migration
     {
         Schema::create('dogadjajs', function (Blueprint $table) {
             $table->id();
+            $table->string('naziv');
+            $table->string('vreme');
+            $table->string('datum');
+            $table->foreignId('kategorija_id');
+            $table->foreignId('mesto_id');
+
+
             $table->timestamps();
         });
     }
