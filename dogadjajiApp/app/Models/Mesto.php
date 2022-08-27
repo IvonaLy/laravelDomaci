@@ -12,6 +12,7 @@ class Mesto extends Model
         'id',
         'naziv_mesta',
         'kapacitet', 
+        'adresa'
     ];
     public function dogadjaj()
     {

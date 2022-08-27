@@ -14,7 +14,10 @@ class MestoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'naziv_mesta' => $this->faker->unique()->word(),
+            'kapacitet' => $this->faker->numberBetween($min = 50, $max = 30000) ,
+            'adresa' => $this->faker->address(),
+            
         ];
     }
 }
