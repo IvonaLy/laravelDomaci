@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Dogadjaj;
 use Illuminate\Database\Seeder;
 
 class DogadjajSeeder extends Seeder
@@ -13,6 +14,7 @@ class DogadjajSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Dogadjaj::factory(10)->create();
     }
+     
 }

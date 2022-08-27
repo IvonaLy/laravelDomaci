@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Mesto;
 use Illuminate\Database\Seeder;
 
 class MestoSeeder extends Seeder
@@ -13,6 +14,6 @@ class MestoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Mesto::factory(5)->create();
     }
 }
